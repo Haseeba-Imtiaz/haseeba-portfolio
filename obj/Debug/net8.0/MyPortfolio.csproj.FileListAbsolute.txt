@@ -28,3 +28,4 @@ C:\Users\shera\MyPortfolio\obj\Debug\net8.0\refint\MyPortfolio.dll
 C:\Users\shera\MyPortfolio\obj\Debug\net8.0\MyPortfolio.pdb
 C:\Users\shera\MyPortfolio\obj\Debug\net8.0\MyPortfolio.genruntimeconfig.cache
 C:\Users\shera\MyPortfolio\obj\Debug\net8.0\ref\MyPortfolio.dll
+C:\Users\shera\MyPortfolio\obj\Debug\net8.0\MyPortfolio.sourcelink.json

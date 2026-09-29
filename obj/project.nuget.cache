@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "7YdeB6bcHcILoN4hv0iOdfweZqvPL/yOk/Kr4nXJOdn1kmZ4NdT+K4jICW4TJwcvMa31YtWT8L+HiaC6Yg45kg==",
+  "dgSpecHash": "9RINNq+jaojsX5c0SnNmusKY1MvMDzajCNpWci7By1/aeaGfEhp5GWILXmYEELB4RB8sIsiyqH0qaoHNqY3IBQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\shera\\MyPortfolio\\MyPortfolio.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\shera\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\8.0.30\\microsoft.netcore.app.runtime.win-x64.8.0.30.nupkg.sha512",
+    "C:\\Users\\shera\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\8.0.30\\microsoft.windowsdesktop.app.runtime.win-x64.8.0.30.nupkg.sha512",
+    "C:\\Users\\shera\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\8.0.30\\microsoft.aspnetcore.app.runtime.win-x64.8.0.30.nupkg.sha512"
+  ],
   "logs": []
 }

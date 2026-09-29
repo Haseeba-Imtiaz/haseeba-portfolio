@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100% !important;
+    min-height: 100vh !important;
+    background-color: #050505 !important;
+    overflow-x: hidden !important;
+}
+/* Gold Glitter Text Style */
+.glitter-signature {
+    font-family: 'Great Vibes', cursive;
+    color: #FFE599; /* Light Gold base text - Always visible */
+    position: relative;
+    display: inline-block;
+    /* Rich Golden Text Glow */
+    text-shadow: 
+        0 0 5px #D4AF37,
+        0 0 10px #D4AF37,
+        0 0 20px #AA7C11;
+}
+
+/* Shimmer Light Layer Over Text */
+.glitter-signature::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /* Bright Sparkling Gradient */
+    background: linear-gradient(
+        110deg, 
+        transparent 20%, 
+        #FFFFFF 45%, 
+        #FFE599 50%, 
+        #FFFFFF 55%, 
+        transparent 80%
+    );
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmerGold 2.5s infinite linear;
+    pointer-events: none;
+}
+
+@keyframes shimmerGold {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+/* Sabhi icons ka container */
+.social-links-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Ya center/flex-start jo aapke layout ke mutabiq ho */
+  gap: 15px; /* Sabhi icons ke beech me barabar gap */
+}
+
+/* Har icon ka box background aur size */
+.icon-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;            /* Same width */
+  height: 40px;           /* Same height */
+  background-color: #1e1e1e; /* Dark background box (aapke theme ke hisab se) */
+  border-radius: 8px;     /* Rounded corners ke liye */
+  color: #ffffff;         /* Icon ka color */
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect (Optional) */
+.icon-box:hover {
+  background-color: #333333;
+  transform: translateY(-2px);
+}

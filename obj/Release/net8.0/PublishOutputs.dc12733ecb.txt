@@ -1,0 +1,12 @@
+C:\Users\shera\MyPortfolio\publish\MyPortfolio.exe
+C:\Users\shera\MyPortfolio\publish\publish\web.config
+C:\Users\shera\MyPortfolio\publish\appsettings.Development.json
+C:\Users\shera\MyPortfolio\publish\appsettings.json
+C:\Users\shera\MyPortfolio\publish\publish\appsettings.Development.json
+C:\Users\shera\MyPortfolio\publish\publish\appsettings.json
+C:\Users\shera\MyPortfolio\publish\publish\MyPortfolio.deps.json
+C:\Users\shera\MyPortfolio\publish\publish\MyPortfolio.runtimeconfig.json
+C:\Users\shera\MyPortfolio\publish\MyPortfolio.dll
+C:\Users\shera\MyPortfolio\publish\MyPortfolio.deps.json
+C:\Users\shera\MyPortfolio\publish\MyPortfolio.runtimeconfig.json
+C:\Users\shera\MyPortfolio\publish\MyPortfolio.pdb

@@ -1,0 +1,693 @@
+﻿<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+@{
+    ViewData["Title"] = "Portfolio";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="w-full min-h-screen bg-[#050505] text-white font-sans overflow-x-hidden m-0 p-0">
+    
+  <!-- HERO SECTION -->
+<section class="relative w-full h-screen overflow-hidden select-none flex flex-col justify-between m-0 p-0 bg-[#050505]">
+    
+    <!-- Video Background Layer with Spotlight Positioning -->
+    <!-- Video Background Layer with Extra Floor & Ambient Glow -->
+<div class="absolute inset-0 w-full h-full z-0 pointer-events-none overflow-hidden">
+    <!-- Video element with increased brightness & saturation for floor glow -->
+    <video autoPlay loop muted playsInline 
+           class="w-full h-full object-cover filter brightness-110 contrast-105 saturate-110" 
+           style="object-position: 20% 20%;">
+        <source src="~/hero-video.mp4" type="video/mp4" />
+    </video>
+    <!-- Signature & Quote Overlay (Right Side) -->
+<div class="absolute right-[8%] md:right-[12%] top-[85%] -translate-y-1/2 z-10 flex flex-col items-start gap-1 text-left pointer-events-none select-none hidden sm:flex">
+    
+    <!-- Small Tagline / Quote -->
+    <p class="text-[10px] md:text-xs font-semibold tracking-widest text-amber-200/80 uppercase">
+        CODE IS MY CRAFT. <br />
+        IMPACT IS MY GOAL.
+    </p>
+
+    <!-- Signature / Name with Permanent Visibility & Shimmer -->
+<div class="flex items-center gap-2 mt-1">
+    <!-- Glowing Dot Accent -->
+    <span class="w-1.5 h-1.5 rounded-full bg-[#D4AF37] shadow-[0_0_8px_#D4AF37]"></span>
+    
+    <!-- Cursive Signature Text -->
+    <span class="text-2xl md:text-3xl font-normal glitter-signature" data-text="Haseeba">
+        Haseeba
+    </span>
+</div>
+
+</div>
+
+    <!-- Custom Ambient Gold Radial Glow Behind Text & Floor -->
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-amber-500/20 via-transparent to-transparent pointer-events-none"></div>
+
+    <!-- Soft Left Dark Gradient (Text readable rakhne ke liye aur roshni ko block na karne ke liye) -->
+    <div class="absolute inset-0 bg-gradient-to-r from-[#050505]/90 via-[#050505]/40 to-transparent w-full md:w-[50%] z-10"></div>
+    
+    <!-- Light Bottom Fade (Floor light boost karne ke liye halka kar diya hai) -->
+    <div class="absolute inset-0 bg-gradient-to-t from-[#050505]/60 via-transparent to-transparent z-10"></div>
+</div>
+
+    <!-- Navbar -->
+    <nav class="relative z-20 w-full px-8 md:px-16 py-6 flex justify-between items-center bg-transparent">
+        <div class="text-sm md:text-base font-black tracking-[0.25em] text-white uppercase opacity-90">
+            PORTFOLIO.
+        </div>
+        
+        <div class="flex items-center gap-6 md:gap-10 text-[11px] md:text-xs font-semibold tracking-[0.2em] text-gray-300 uppercase">
+            <a href="#about" class="hover:text-amber-400 transition-colors">ABOUT</a>
+            <a href="#projects" class="hover:text-amber-400 transition-colors">PROJECTS</a>
+            <a href="#skills" class="hover:text-amber-400 transition-colors">SKILLS</a>
+            <a href="#contact" class="hover:text-amber-400 transition-colors">CONTACT</a>
+            <a href="#contact" class="hidden md:inline-block border border-white/20 px-4 py-2 rounded-full text-[10px] tracking-widest text-gray-300 hover:border-amber-400 hover:text-amber-400 transition-all">LET'S TALK /</a>
+        </div>
+    </nav>
+
+    <!-- Hero Content -->
+    <div class="relative z-20 w-full px-8 md:px-16 my-auto">
+        <div class="max-w-3xl text-left py-1">
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight leading-[0.95] text-white">
+                I BUILD <br />
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#FFE599] via-[#D4AF37] to-[#AA7C11]">
+                    DIGITAL
+                </span> <br />
+                EXPERIENCES
+            </h1>
+
+            <p class="mt-6 text-[10px] md:text-xs font-bold tracking-[0.25em] text-[#D4AF37] uppercase">
+                FRONTEND DEVELOPER  &bull; ASP.NET CORE &bull; DATA ANALYTICS
+            </p>
+
+            <p class="mt-4 text-gray-300 text-xs md:text-sm max-w-md leading-relaxed font-normal opacity-80">
+               I turn bold ideas into responsive, user-friendly web experiences and modern digital solutions. Combining intuitive React & ASP.NET interfaces with data-driven insights to build clean, scalable applications
+            </p>
+
+            <div class="mt-8 flex flex-wrap gap-4 items-center">
+                <a href="#projects" class="border border-[#D4AF37]/60 bg-black/40 backdrop-blur-md text-[#FFE599] font-bold text-[11px] uppercase tracking-[0.15em] px-12 py-3.5 rounded-sm hover:bg-[#D4AF37] hover:text-black transition-all">
+                    EXPLORE MY WORK &nearr;
+                </a>
+                <a href="~/resume.pdf" target="_blank" class="border border-white/20 bg-black/20 backdrop-blur-md text-gray-300 font-bold text-[11px] uppercase tracking-[0.15em] px-12 py-3.5 rounded-sm hover:border-white hover:text-white transition-all">
+                    DOWNLOAD RESUME &nearr;
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="relative z-20 pb-6 w-full flex justify-center items-center">
+        <a href="#about" class="animate-bounce text-xs font-semibold tracking-widest text-[#D4AF37] opacity-80 uppercase">
+            &darr; Scroll Down
+        </a>
+    </div>
+</section>
+
+</div>
+    <!-- ABOUT SECTION -->
+<section id="about" class="relative w-full min-h-screen bg-[#050505] text-white flex items-center justify-center px-6 md:px-12 py-20 overflow-hidden select-none">
+    <div class="max-w-9xl w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center z-10">
+        
+        <!-- Text Left Column -->
+        <div class="lg:col-span-7 flex flex-col justify-center">
+            <p class="text-[#D4AF37] font-semibold text-sm md:text-base tracking-widest uppercase mb-3">Haseeba Imtiaz</p>
+            <h2 class="text-3xl md:text-7xl lg:text-7xl font-black uppercase tracking-tight leading-tight text-white">
+                PASSIONATE FRONTEND DEVELOPER & <br />
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#FFE599] via-[#D4AF37] to-[#AA7C11]">
+                    REACT.JS EXPERT.
+                </span>
+            </h2>
+            <p class="mt-6 text-gray-300 text-xs md:text-sm leading-relaxed max-w-4xl opacity-90">
+                Information Technology student with a strong foundation in building responsive, high-performance web interfaces using React.js and modern CSS layouts. Highly skilled in bridging the gap between elegant UI/UX designs and clean, scalable code.
+            </p>
+            
+            <!-- Statistics Grid (CGPA removed) -->
+            <div class="mt-12 grid grid-cols-2 sm:grid-cols-3 gap-6 pt-6 border-t border-white/10">
+                <div>
+                    <h3 class="text-2xl md:text-3xl font-black text-[#D4AF37]">100%</h3>
+                    <p class="mt-1 text-[10px] md:text-xs font-bold tracking-widest text-gray-400 uppercase">RESPONSIVE DESIGN</p>
+                </div>
+                <div>
+                    <h3 class="text-2xl md:text-3xl font-black text-[#D4AF37]">REACT.JS</h3>
+                    <p class="mt-1 text-[10px] md:text-xs font-bold tracking-widest text-gray-400 uppercase">CORE EXPERTISE</p>
+                </div>
+                <div>
+                    <h3 class="text-2xl md:text-3xl font-black text-[#D4AF37]">ASP.NET CORE</h3>
+                    <p class="mt-1 text-[10px] md:text-xs font-bold tracking-widest text-gray-400 uppercase">WEB DEVELOPMENT</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gold Border Card Right Column -->
+        <!-- Gold Border Card Right Column (With Smooth Touch/Hover Move Effect) -->
+<div class="lg:col-span-5 flex justify-center lg:justify-end">
+    <!-- Outer Card Wrapper with Hover/Touch Movement -->
+    <div class="relative p-[10px] rounded-sm bg-[#0a0a0a]/90 border border-[#D4AF37]/30 shadow-2xl shadow-amber-500/10 group transition-all duration-500 ease-out transform hover:-translate-y-3 hover:scale-105 hover:shadow-[0_20px_50px_rgba(212,175,55,0.25)] active:scale-95 cursor-pointer">
+        
+        <!-- Corner Metallic Accents (Highlighting Corners) -->
+        <div class="absolute -top-[2px] -left-[2px] w-4 h-4 border-t-2 border-l-2 border-[#FFE599] shadow-[0_0_8px_#D4AF37] transition-all duration-300 group-hover:scale-125"></div>
+        <div class="absolute -top-[2px] -right-[2px] w-4 h-4 border-t-2 border-r-2 border-[#FFE599] shadow-[0_0_8px_#D4AF37] transition-all duration-300 group-hover:scale-125"></div>
+        <div class="absolute -bottom-[2px] -left-[2px] w-4 h-4 border-b-2 border-l-2 border-[#FFE599] shadow-[0_0_8px_#D4AF37] transition-all duration-300 group-hover:scale-125"></div>
+        <div class="absolute -bottom-[2px] -right-[2px] w-4 h-4 border-b-2 border-r-2 border-[#FFE599] shadow-[0_0_8px_#D4AF37] transition-all duration-300 group-hover:scale-125"></div>
+
+        <!-- Inner Thin Gold Frame -->
+        <div class="relative p-[2px] rounded-sm bg-gradient-to-b from-[#D4AF37] via-[#AA7C11] to-[#5B4308]">
+            <div class="relative bg-[#0A0A0A] overflow-hidden rounded-sm w-[280px] sm:w-[320px] h-[380px] sm:h-[440px]">
+                <!-- Profile Image with Internal Zoom on Hover -->
+                <img src="~/profile-photo.jpeg" alt="Haseeba Imtiaz" class="w-full h-full object-cover object-top filter brightness-105 contrast-105 transition-transform duration-700 ease-out group-hover:scale-110" />
+                
+                <!-- Bottom Dark Overlay -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<section id="projects" class="relative w-full min-h-screen bg-[#050505] text-white px-4 sm:px-6 md:px-10 py-24 select-none border-t border-white/5">
+    <div class="w-full">
+        
+        <div class="mb-16 md:mb-20 w-full">
+            <p class="text-[11px] md:text-xs font-bold tracking-[0.25em] text-[#D4AF37] uppercase">02 / FEATURED WORKS</p>
+            <h2 class="text-4xl sm:text-6xl md:text-7xl font-black uppercase tracking-tight text-[#D4AF37] mt-2 leading-tight">
+                SELECTED WORKS. <br />
+                <span class="glitter-heading" data-text="ENGINEERED VALUE.">ENGINEERED VALUE.</span>
+            </h2>
+        </div>
+          <div class="max-w-7xl mx-auto w-full">
+        <div class="relative flex flex-col gap-12 md:gap-16 pb-20">
+
+            <!-- PROJECT 1 -->
+            <div class="sticky top-24 w-full transition-all duration-500 transform hover:-translate-y-2 group">
+                <div class="relative p-[1.5px] rounded-xl bg-gradient-to-br from-[#D4AF37]/60 via-white/20 to-transparent shadow-[0_20px_50px_rgba(0,0,0,0.9)] backdrop-blur-md overflow-hidden">
+                    
+                    <div class="absolute -top-24 -left-24 w-96 h-96 bg-gradient-to-br from-white/20 via-white/5 to-transparent rounded-full blur-2xl pointer-events-none group-hover:opacity-100 opacity-60 transition-opacity duration-700"></div>
+
+                    <div class="absolute -top-[2px] -left-[2px] w-4 h-4 border-t-2 border-l-2 border-[#FFE599] z-20"></div>
+                    <div class="absolute -top-[2px] -right-[2px] w-4 h-4 border-t-2 border-r-2 border-[#FFE599] z-20"></div>
+
+                    <div class="relative z-10 bg-[#090909]/95 p-8 sm:p-10 md:p-14 rounded-xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border border-white/10 min-h-[380px]">
+                        
+                        <div class="lg:col-span-8 flex flex-col justify-between h-full">
+                            <div>
+                                <div class="flex items-center gap-3 mb-5">
+                                    <span class="text-xs font-mono text-gray-400">01 // E-COMMERCE PLATFORM</span>
+                                    <span class="text-xs font-bold tracking-widest text-[#D4AF37] bg-[#D4AF37]/10 px-3 py-1 rounded border border-[#D4AF37]/30">REACT.JS / VITE</span>
+                                </div>
+
+                                <h3 class="text-3xl sm:text-5xl font-black uppercase tracking-tight text-white group-hover:text-[#D4AF37] transition-colors leading-none">
+                                    SIALGEAR E-COMMERCE
+                                </h3>
+
+                                <p class="mt-6 text-gray-300 text-sm md:text-base leading-relaxed max-w-3xl">
+                                    An end-to-end responsive e-commerce platform built independently using React.js, Vite, and React Router. Features custom cart workflows, product filtering, dynamic route management, and modular architecture.
+                                </p>
+
+                                <div class="flex flex-wrap gap-2.5 mt-8">
+                                    <span class="text-xs font-bold font-mono px-4 py-2 bg-[#D4AF37]/10 border border-[#D4AF37] text-[#D4AF37] rounded-md tracking-wider shadow-[0_0_10px_rgba(212,175,55,0.15)] hover:bg-[#D4AF37] hover:text-black transition-all">REACT.JS</span>
+                                    <span class="text-xs font-bold font-mono px-4 py-2 bg-[#D4AF37]/10 border border-[#D4AF37] text-[#D4AF37] rounded-md tracking-wider shadow-[0_0_10px_rgba(212,175,55,0.15)] hover:bg-[#D4AF37] hover:text-black transition-all">VITE</span>
+                                    <span class="text-xs font-bold font-mono px-4 py-2 bg-[#D4AF37]/10 border border-[#D4AF37] text-[#D4AF37] rounded-md tracking-wider shadow-[0_0_10px_rgba(212,175,55,0.15)] hover:bg-[#D4AF37] hover:text-black transition-all">TAILWIND CSS</span>
+                                    <span class="text-xs font-bold font-mono px-4 py-2 bg-[#D4AF37]/10 border border-[#D4AF37] text-[#D4AF37] rounded-md tracking-wider shadow-[0_0_10px_rgba(212,175,55,0.15)] hover:bg-[#D4AF37] hover:text-black transition-all">DYNAMIC ROUTING</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-4 flex flex-col justify-between h-full border-t lg:border-t-0 lg:border-l border-white/10 pt-8 lg:pt-0 lg:pl-10">
+                            <div class="space-y-4 font-mono text-xs md:text-sm">
+                                <div class="flex justify-between text-gray-400">
+                                    <span>ROLE:</span>
+                                    <span class="text-white font-semibold">LEAD DEVELOPER</span>
+                                </div>
+                                <div class="flex justify-between text-gray-400">
+                                    <span>STATUS:</span>
+                                    <span class="text-[#D4AF37] font-semibold">LIVE DEPLOYED</span>
+                                </div>
+                            </div>
+
+                            <div class="mt-10">
+                                <a href="https://sialgear.vercel.app" target="_blank" class="w-full inline-flex justify-center items-center gap-2 text-xs md:text-sm font-bold text-black bg-gradient-to-r from-[#D4AF37] to-[#AA7C11] py-4 px-6 rounded uppercase tracking-wider hover:brightness-110 transition-all shadow-[0_0_20px_rgba(212,175,55,0.3)]">
+                                    VIEW ON VERCEL ↗️
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJECT 2 -->
+            <div class="sticky top-28 w-full transition-all duration-500 transform hover:-translate-y-2 group">
+                <div class="relative p-[1.5px] rounded-xl bg-gradient-to-br from-[#D4AF37]/60 via-white/20 to-transparent shadow-[0_20px_50px_rgba(0,0,0,0.9)] backdrop-blur-md overflow-hidden">
+                    
+                    <div class="absolute -top-24 -left-24 w-96 h-96 bg-gradient-to-br from-white/20 via-white/5 to-transparent rounded-full blur-2xl pointer-events-none group-hover:opacity-100 opacity-60 transition-opacity duration-700"></div>
+
+                    <div class="absolute -top-[2px] -left-[2px] w-4 h-4 border-t-2 border-l-2 border-[#FFE599] z-20"></div>
+                    <div class="absolute -top-[2px] -right-[2px] w-4 h-4 border-t-2 border-r-2 border-[#FFE599] z-20"></div>
+
+                    <div class="relative z-10 bg-[#090909]/95 p-8 sm:p-10 md:p-14 rounded-xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border border-white/10 min-h-[380px]">
+                        
+                        <div class="lg:col-span-8 flex flex-col justify-between h-full">
+                            <div>
+                                <div class="flex items-center gap-3 mb-5">
+                                    <span class="text-xs font-mono text-gray-400">02 // WEB PLATFORM (CURRENT)</span>
+                                    <span class="text-xs font-bold tracking-widest text-[#D4AF37] bg-[#D4AF37]/10 px-3 py-1 rounded border border-[#D4AF37]/30">ASP.NET CORE MVC</span>
+                                </div>
+
+                                <h3 class="text-3xl sm:text-5xl font-black uppercase tracking-tight text-white group-hover:text-[#D4AF37] transition-colors leading-none">
+                                    ASP.NET CORE LUXURY PORTFOLIO
+                                </h3>
+
+                                <p class="mt-6 text-gray-300 text-sm md:text-base leading-relaxed max-w-3xl">
+                                    Current high-end, dark-themed interactive portfolio platform engineered using C# ASP.NET Core MVC and Tailwind CSS. Features custom video background overlays, continuous gold glitter shimmer animations, and sticky stacked 3D cards.
+                                </p>
+
+                                <div class="flex flex-wrap gap-2.5 mt-8">
+                                    <span class="text-xs font-bold font-mono px-4 py-2 bg-[#D4AF37]/10 border border-[#D4AF37] text-[#D4AF37] rounded-md tracking-wider shadow-[0_0_10px_rgba(212,175,55,0.15)] hover:bg-[#D4AF37] hover:text-black transition-all">ASP.NET CORE .NET 8</span>
+                                    <span class="text-xs font-bold font-mono px-4 py-2 bg-[#D4AF37]/10 border border-[#D4AF37] text-[#D4AF37] rounded-md tracking-wider shadow-[0_0_10px_rgba(212,175,55,0.15)] hover:bg-[#D4AF37] hover:text-black transition-all">C# / MVC</span>
+                                    <span class="text-xs font-bold font-mono px-4 py-2 bg-[#D4AF37]/10 border border-[#D4AF37] text-[#D4AF37] rounded-md tracking-wider shadow-[0_0_10px_rgba(212,175,55,0.15)] hover:bg-[#D4AF37] hover:text-black transition-all">TAILWIND CSS</span>
+                                    <span class="text-xs font-bold font-mono px-4 py-2 bg-[#D4AF37]/10 border border-[#D4AF37] text-[#D4AF37] rounded-md tracking-wider shadow-[0_0_10px_rgba(212,175,55,0.15)] hover:bg-[#D4AF37] hover:text-black transition-all">3D STACKED CARDS</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-4 flex flex-col justify-between h-full border-t lg:border-t-0 lg:border-l border-white/10 pt-8 lg:pt-0 lg:pl-10">
+                            <div class="space-y-4 font-mono text-xs md:text-sm">
+                                <div class="flex justify-between text-gray-400">
+                                    <span>DEVELOPER:</span>
+                                    <span class="text-white font-semibold">HASEEBA IMTIAZ</span>
+                                </div>
+                                <div class="flex justify-between text-gray-400">
+                                    <span>FRAMEWORK:</span>
+                                    <span class="text-[#D4AF37] font-semibold">.NET 8.0 MVC</span>
+                                </div>
+                            </div>
+
+                            <div class="mt-10">
+                                <a href="#" class="w-full inline-flex justify-center items-center gap-2 text-xs md:text-sm font-bold text-black bg-gradient-to-r from-[#D4AF37] to-[#AA7C11] py-4 px-6 rounded uppercase tracking-wider hover:brightness-110 transition-all shadow-[0_0_20px_rgba(212,175,55,0.3)]">
+                                    CURRENT LIVE SITE ↗️
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJECT 3 -->
+            <div class="sticky top-32 w-full transition-all duration-500 transform hover:-translate-y-2 group">
+                <div class="relative p-[1.5px] rounded-xl bg-gradient-to-br from-[#D4AF37]/60 via-white/20 to-transparent shadow-[0_20px_50px_rgba(0,0,0,0.9)] backdrop-blur-md overflow-hidden">
+                    
+                    <div class="absolute -top-24 -left-24 w-96 h-96 bg-gradient-to-br from-white/20 via-white/5 to-transparent rounded-full blur-2xl pointer-events-none group-hover:opacity-100 opacity-60 transition-opacity duration-700"></div>
+
+                    <div class="absolute -top-[2px] -left-[2px] w-4 h-4 border-t-2 border-l-2 border-[#FFE599] z-20"></div>
+                    <div class="absolute -top-[2px] -right-[2px] w-4 h-4 border-t-2 border-r-2 border-[#FFE599] z-20"></div>
+
+                    <div class="relative z-10 bg-[#090909]/95 p-8 sm:p-10 md:p-14 rounded-xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border border-white/10 min-h-[380px]">
+                        
+                        <div class="lg:col-span-8 flex flex-col justify-between h-full">
+                            <div>
+                                <div class="flex items-center gap-3 mb-5">
+                                    <span class="text-xs font-mono text-gray-400">03 // FIRST PORTFOLIO</span>
+                                    <span class="text-xs font-bold tracking-widest text-[#D4AF37] bg-[#D4AF37]/10 px-3 py-1 rounded border border-[#D4AF37]/30">HTML / CSS / JS</span>
+                                </div>
+
+                                <h3 class="text-3xl sm:text-5xl font-black uppercase tracking-tight text-white group-hover:text-[#D4AF37] transition-colors leading-none">
+                                    CLASSIC PORTFOLIO WEBSITE
+                                </h3>
+
+                                <p class="mt-6 text-gray-300 text-sm md:text-base leading-relaxed max-w-3xl">
+                                    My initial personal portfolio website created using standard web technologies. Focused on dynamic UI interactions, responsive page design, custom stylesheets, and lightweight JavaScript functionality.
+                                </p>
+
+                                <div class="flex flex-wrap gap-2.5 mt-8">
+                                    <span class="text-xs font-bold font-mono px-4 py-2 bg-[#D4AF37]/10 border border-[#D4AF37] text-[#D4AF37] rounded-md tracking-wider shadow-[0_0_10px_rgba(212,175,55,0.15)] hover:bg-[#D4AF37] hover:text-black transition-all">HTML5</span>
+                                    <span class="text-xs font-bold font-mono px-4 py-2 bg-[#D4AF37]/10 border border-[#D4AF37] text-[#D4AF37] rounded-md tracking-wider shadow-[0_0_10px_rgba(212,175,55,0.15)] hover:bg-[#D4AF37] hover:text-black transition-all">CSS3</span>
+                                    <span class="text-xs font-bold font-mono px-4 py-2 bg-[#D4AF37]/10 border border-[#D4AF37] text-[#D4AF37] rounded-md tracking-wider shadow-[0_0_10px_rgba(212,175,55,0.15)] hover:bg-[#D4AF37] hover:text-black transition-all">JAVASCRIPT</span>
+                                    <span class="text-xs font-bold font-mono px-4 py-2 bg-[#D4AF37]/10 border border-[#D4AF37] text-[#D4AF37] rounded-md tracking-wider shadow-[0_0_10px_rgba(212,175,55,0.15)] hover:bg-[#D4AF37] hover:text-black transition-all">GITHUB PAGES</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-4 flex flex-col justify-between h-full border-t lg:border-t-0 lg:border-l border-white/10 pt-8 lg:pt-0 lg:pl-10">
+                            <div class="space-y-4 font-mono text-xs md:text-sm">
+                                <div class="flex justify-between text-gray-400">
+                                    <span>ROLE:</span>
+                                    <span class="text-white font-semibold">FRONTEND DEVELOPER</span>
+                                </div>
+                                <div class="flex justify-between text-gray-400">
+                                    <span>TECH STACK:</span>
+                                    <span class="text-[#D4AF37] font-semibold">HTML / CSS / JS</span>
+                                </div>
+                            </div>
+
+                            <div class="mt-10">
+                                <a href="https://haseeba-imtiaz.github.io/portfolio-website" target="_blank" class="w-full inline-flex justify-center items-center gap-2 text-xs md:text-sm font-bold text-black bg-gradient-to-r from-[#D4AF37] to-[#AA7C11] py-4 px-6 rounded uppercase tracking-wider hover:brightness-110 transition-all shadow-[0_0_20px_rgba(212,175,55,0.3)]">
+                                    VIEW REPOSITORY ↗️
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<!-- SKILLS & ARCHITECTURE SECTION (ONLY SLIDING MOVEMENT - NO ZOOM) -->
+<section id="skills" class="relative w-full min-h-screen bg-[#050505] text-white px-4 sm:px-6 md:px-10 py-24 select-none border-t border-white/5">
+    <div class="w-full">
+        
+        <!-- Section Header -->
+        <div class="mb-16 md:mb-20">
+            <p class="text-[11px] md:text-xs font-bold tracking-[0.25em] text-[#D4AF37] uppercase">03 / TECH MATRIX</p>
+            <h2 class="text-4xl sm:text-6xl md:text-7xl font-black uppercase tracking-tight text-[#D4AF37] mt-2 leading-tight">
+                ARCHITECTURAL MASTERY. <br />
+                <span class="glitter-heading" data-text="PRECISION APPLIED.">PRECISION APPLIED.</span>
+            </h2>
+        </div>
+
+        <!-- Skills 2x2 Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+            <!-- Category 1: Frontend Architecture -->
+            <div class="relative p-[1.5px] rounded-xl bg-gradient-to-br from-[#D4AF37]/60 via-white/20 to-transparent transition-all duration-300 transform hover:translate-x-3 hover:-translate-y-1 shadow-[0_10px_30px_rgba(0,0,0,0.8)] overflow-hidden group">
+                
+                <!-- White Glass Reflection Sheen -->
+                <div class="absolute -top-20 -left-20 w-80 h-80 bg-gradient-to-br from-white/25 via-white/5 to-transparent rounded-full blur-2xl pointer-events-none group-hover:opacity-100 opacity-60 transition-opacity duration-700"></div>
+
+                <div class="relative z-10 bg-[#090909]/95 p-8 sm:p-10 rounded-xl h-full flex flex-col justify-between border border-white/10 backdrop-blur-md">
+                    <div>
+                        <span class="text-[11px] font-mono font-bold tracking-wider text-[#D4AF37] bg-[#D4AF37]/10 px-3 py-1 rounded border border-[#D4AF37]/40 uppercase">FRONTEND</span>
+                        <h3 class="text-2xl font-bold uppercase text-white mt-4 group-hover:text-[#D4AF37] transition-colors">
+                            FRONTEND ARCHITECTURE
+                        </h3>
+                        <p class="text-gray-300 text-xs sm:text-sm mt-3 leading-relaxed">
+                            Specialized in building responsive, high-performance web applications, interactive UI components, and modern luxury design systems.
+                        </p>
+                    </div>
+
+                    <!-- Gold Skill Badges -->
+                    <div class="flex flex-wrap gap-3 mt-8">
+                        <span class="text-xs font-bold font-mono px-4 py-2 bg-[#D4AF37]/10 border border-[#D4AF37] text-[#D4AF37] rounded-md tracking-wider shadow-[0_0_10px_rgba(212,175,55,0.15)] hover:bg-[#D4AF37] hover:text-black transition-all">REACT.JS</span>
+                        <span class="text-xs font-bold font-mono px-4 py-2 bg-[#D4AF37]/10 border border-[#D4AF37] text-[#D4AF37] rounded-md tracking-wider shadow-[0_0_10px_rgba(212,175,55,0.15)] hover:bg-[#D4AF37] hover:text-black transition-all">TAILWIND CSS</span>
+                        <span class="text-xs font-bold font-mono px-4 py-2 bg-[#D4AF37]/10 border border-[#D4AF37] text-[#D4AF37] rounded-md tracking-wider shadow-[0_0_10px_rgba(212,175,55,0.15)] hover:bg-[#D4AF37] hover:text-black transition-all">BOOTSTRAP</span>
+                        <span class="text-xs font-bold font-mono px-4 py-2 bg-[#D4AF37]/10 border border-[#D4AF37] text-[#D4AF37] rounded-md tracking-wider shadow-[0_0_10px_rgba(212,175,55,0.15)] hover:bg-[#D4AF37] hover:text-black transition-all">JAVASCRIPT (ES6+)</span>
+                        <span class="text-xs font-bold font-mono px-4 py-2 bg-[#D4AF37]/10 border border-[#D4AF37] text-[#D4AF37] rounded-md tracking-wider shadow-[0_0_10px_rgba(212,175,55,0.15)] hover:bg-[#D4AF37] hover:text-black transition-all">HTML5 / CSS3</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 2: Backend Engineering -->
+            <div class="relative p-[1.5px] rounded-xl bg-gradient-to-br from-[#D4AF37]/60 via-white/20 to-transparent transition-all duration-300 transform hover:translate-x-3 hover:-translate-y-1 shadow-[0_10px_30px_rgba(0,0,0,0.8)] overflow-hidden group">
+                
+                <!-- White Glass Reflection Sheen -->
+                <div class="absolute -top-20 -left-20 w-80 h-80 bg-gradient-to-br from-white/25 via-white/5 to-transparent rounded-full blur-2xl pointer-events-none group-hover:opacity-100 opacity-60 transition-opacity duration-700"></div>
+
+                <div class="relative z-10 bg-[#090909]/95 p-8 sm:p-10 rounded-xl h-full flex flex-col justify-between border border-white/10 backdrop-blur-md">
+                    <div>
+                        <span class="text-[11px] font-mono font-bold tracking-wider text-[#D4AF37] bg-[#D4AF37]/10 px-3 py-1 rounded border border-[#D4AF37]/40 uppercase">BACKEND & CORE</span>
+                        <h3 class="text-2xl font-bold uppercase text-white mt-4 group-hover:text-[#D4AF37] transition-colors">
+                            BACKEND ENGINEERING
+                        </h3>
+                        <p class="text-gray-300 text-xs sm:text-sm mt-3 leading-relaxed">
+                            Actively expanding backend architecture skills through ASP.NET Core MVC framework, C# logic building, controllers, dynamic rendering, and web APIs.
+                        </p>
+                    </div>
+
+                    <!-- Gold Skill Badges -->
+                    <div class="flex flex-wrap gap-3 mt-8">
+                        <span class="text-xs font-bold font-mono px-4 py-2 bg-[#D4AF37]/10 border border-[#D4AF37] text-[#D4AF37] rounded-md tracking-wider shadow-[0_0_10px_rgba(212,175,55,0.15)] hover:bg-[#D4AF37] hover:text-black transition-all">ASP.NET CORE .NET 8 (IN PROGRESS)</span>
+                        <span class="text-xs font-bold font-mono px-4 py-2 bg-[#D4AF37]/10 border border-[#D4AF37] text-[#D4AF37] rounded-md tracking-wider shadow-[0_0_10px_rgba(212,175,55,0.15)] hover:bg-[#D4AF37] hover:text-black transition-all">C#</span>
+                        <span class="text-xs font-bold font-mono px-4 py-2 bg-[#D4AF37]/10 border border-[#D4AF37] text-[#D4AF37] rounded-md tracking-wider shadow-[0_0_10px_rgba(212,175,55,0.15)] hover:bg-[#D4AF37] hover:text-black transition-all">MVC ARCHITECTURE</span>
+                        <span class="text-xs font-bold font-mono px-4 py-2 bg-[#D4AF37]/10 border border-[#D4AF37] text-[#D4AF37] rounded-md tracking-wider shadow-[0_0_10px_rgba(212,175,55,0.15)] hover:bg-[#D4AF37] hover:text-black transition-all">REST APIS</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 3: Data & Analytics -->
+            <div class="relative p-[1.5px] rounded-xl bg-gradient-to-br from-[#D4AF37]/60 via-white/20 to-transparent transition-all duration-300 transform hover:translate-x-3 hover:-translate-y-1 shadow-[0_10px_30px_rgba(0,0,0,0.8)] overflow-hidden group">
+                
+                <!-- White Glass Reflection Sheen -->
+                <div class="absolute -top-20 -left-20 w-80 h-80 bg-gradient-to-br from-white/25 via-white/5 to-transparent rounded-full blur-2xl pointer-events-none group-hover:opacity-100 opacity-60 transition-opacity duration-700"></div>
+
+                <div class="relative z-10 bg-[#090909]/95 p-8 sm:p-10 rounded-xl h-full flex flex-col justify-between border border-white/10 backdrop-blur-md">
+                    <div>
+                        <span class="text-[11px] font-mono font-bold tracking-wider text-[#D4AF37] bg-[#D4AF37]/10 px-3 py-1 rounded border border-[#D4AF37]/40 uppercase">DATA PLATFORMS</span>
+                        <h3 class="text-2xl font-bold uppercase text-white mt-4 group-hover:text-[#D4AF37] transition-colors">
+                            DATA & ANALYTICS
+                        </h3>
+                        <p class="text-gray-300 text-xs sm:text-sm mt-3 leading-relaxed">
+                            Certified in data analytics foundations, analytical thinking, dataset handling, and business decision workflows.
+                        </p>
+                    </div>
+
+                    <!-- Gold Skill Badges -->
+                    <div class="flex flex-wrap gap-3 mt-8">
+                        <span class="text-xs font-bold font-mono px-4 py-2 bg-[#D4AF37]/10 border border-[#D4AF37] text-[#D4AF37] rounded-md tracking-wider shadow-[0_0_10px_rgba(212,175,55,0.15)] hover:bg-[#D4AF37] hover:text-black transition-all">GOOGLE DATA ANALYTICS</span>
+                        <span class="text-xs font-bold font-mono px-4 py-2 bg-[#D4AF37]/10 border border-[#D4AF37] text-[#D4AF37] rounded-md tracking-wider shadow-[0_0_10px_rgba(212,175,55,0.15)] hover:bg-[#D4AF37] hover:text-black transition-all">SQL</span>
+                        <span class="text-xs font-bold font-mono px-4 py-2 bg-[#D4AF37]/10 border border-[#D4AF37] text-[#D4AF37] rounded-md tracking-wider shadow-[0_0_10px_rgba(212,175,55,0.15)] hover:bg-[#D4AF37] hover:text-black transition-all">DATA ANALYSIS</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 4: Tools & Ecosystem -->
+            <div class="relative p-[1.5px] rounded-xl bg-gradient-to-br from-[#D4AF37]/60 via-white/20 to-transparent transition-all duration-300 transform hover:translate-x-3 hover:-translate-y-1 shadow-[0_10px_30px_rgba(0,0,0,0.8)] overflow-hidden group">
+                
+                <!-- White Glass Reflection Sheen -->
+                <div class="absolute -top-20 -left-20 w-80 h-80 bg-gradient-to-br from-white/25 via-white/5 to-transparent rounded-full blur-2xl pointer-events-none group-hover:opacity-100 opacity-60 transition-opacity duration-700"></div>
+
+                <div class="relative z-10 bg-[#090909]/95 p-8 sm:p-10 rounded-xl h-full flex flex-col justify-between border border-white/10 backdrop-blur-md">
+                    <div>
+                        <span class="text-[11px] font-mono font-bold tracking-wider text-[#D4AF37] bg-[#D4AF37]/10 px-3 py-1 rounded border border-[#D4AF37]/40 uppercase">WORKFLOW</span>
+                        <h3 class="text-2xl font-bold uppercase text-white mt-4 group-hover:text-[#D4AF37] transition-colors">
+                            TOOLS & ECOSYSTEM
+                        </h3>
+                        <p class="text-gray-300 text-xs sm:text-sm mt-3 leading-relaxed">
+                            Version control systems, development IDEs, command line interfaces, and modular web build systems.
+                        </p>
+                    </div>
+
+                    <!-- Gold Skill Badges -->
+                    <div class="flex flex-wrap gap-3 mt-8">
+                        <span class="text-xs font-bold font-mono px-4 py-2 bg-[#D4AF37]/10 border border-[#D4AF37] text-[#D4AF37] rounded-md tracking-wider shadow-[0_0_10px_rgba(212,175,55,0.15)] hover:bg-[#D4AF37] hover:text-black transition-all">GIT & GITHUB</span>
+                        <span class="text-xs font-bold font-mono px-4 py-2 bg-[#D4AF37]/10 border border-[#D4AF37] text-[#D4AF37] rounded-md tracking-wider shadow-[0_0_10px_rgba(212,175,55,0.15)] hover:bg-[#D4AF37] hover:text-black transition-all">VS CODE / VISUAL STUDIO</span>
+                        <span class="text-xs font-bold font-mono px-4 py-2 bg-[#D4AF37]/10 border border-[#D4AF37] text-[#D4AF37] rounded-md tracking-wider shadow-[0_0_10px_rgba(212,175,55,0.15)] hover:bg-[#D4AF37] hover:text-black transition-all">.NET CLI</span>
+                        <span class="text-xs font-bold font-mono px-4 py-2 bg-[#D4AF37]/10 border border-[#D4AF37] text-[#D4AF37] rounded-md tracking-wider shadow-[0_0_10px_rgba(212,175,55,0.15)] hover:bg-[#D4AF37] hover:text-black transition-all">LINUX COMMANDS</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<!-- 04 / EXPERIENCE & MILESTONES SECTION -->
+<section id="experience" class="relative w-full min-h-screen bg-[#050505] text-[#D4AF37] px-4 md:px-10 py-24 select-none border-t border-white/5">
+    
+    <!-- Left Aligned Heading (Same exact font size & style as Skills) -->
+    <div class="mb-16 md:mb-20 w-full">
+        <p class="text-[11px] md:text-xs font-bold tracking-[0.25em] text-[#D4AF37] uppercase">04 / EXPERIENCE & MILESTONES</p>
+        <h2 class="text-4xl sm:text-6xl md:text-7xl font-black uppercase tracking-tight text-white mt-2 leading-tight">
+            EXPERIENCE & <br />
+            <span class="glitter-heading" data-text="MILESTONES.">MILESTONES.</span>
+        </h2>
+    </div>
+
+    <!-- Centered Timeline Container -->
+    <div class="max-w-6xl mx-auto w-full relative pt-6 pb-12">
+
+        <!-- Glowing Vertical Gold Line -->
+        <div class="absolute left-6 md:left-1/3 top-0 bottom-0 w-[2px] bg-gradient-to-b from-[#D4AF37] via-[#D4AF37]/50 to-transparent shadow-[0_0_12px_rgba(212,175,55,0.8)]"></div>
+
+        <div class="space-y-16">
+
+            <!-- TIMELINE ITEM 1 -->
+            <div class="relative flex flex-col md:flex-row items-start gap-8 group">
+                <!-- Glowing Node Point -->
+                <div class="absolute left-[19px] md:left-[calc(33.333%-5px)] top-1.5 w-3 h-3 rounded-full bg-[#D4AF37] border-2 border-black shadow-[0_0_15px_#D4AF37] z-10 group-hover:scale-150 transition-transform duration-300"></div>
+
+                <!-- Left Column: Dates & Meta -->
+                <div class="pl-14 md:pl-0 md:w-1/3 md:pr-12 md:text-right font-mono text-xs md:text-sm text-[#D4AF37]">
+                    <span class="font-bold tracking-wider">2026 - PRESENT</span>
+                    <p class="text-gray-400 text-xs mt-1">ACADEMIC & PROJECTS</p>
+                </div>
+
+                <!-- Right Column: Content -->
+                <div class="pl-14 md:pl-8 md:w-2/3">
+                    <h3 class="text-2xl md:text-3xl font-black uppercase tracking-tight text-white group-hover:text-[#D4AF37] transition-colors">
+                        FRONTEND & WEB DEVELOPER
+                    </h3>
+                    <p class="text-xs font-mono text-[#D4AF37] uppercase tracking-wider mt-1">ASP.NET CORE & REACT ARCHITECTURE</p>
+                    <p class="mt-4 text-gray-300 text-sm md:text-base leading-relaxed max-w-2xl">
+                        Engineered high-performance web applications using ASP.NET Core MVC, React.js, Vite, and Tailwind CSS. Built custom dynamic routing, e-commerce workflows, and interactive portfolio components.
+                    </p>
+                </div>
+            </div>
+
+            <!-- TIMELINE ITEM 2 -->
+            <div class="relative flex flex-col md:flex-row items-start gap-8 group">
+                <!-- Glowing Node Point -->
+                <div class="absolute left-[19px] md:left-[calc(33.333%-5px)] top-1.5 w-3 h-3 rounded-full bg-[#D4AF37] border-2 border-black shadow-[0_0_15px_#D4AF37] z-10 group-hover:scale-150 transition-transform duration-300"></div>
+
+                <!-- Left Column: Dates & Meta -->
+                <div class="pl-14 md:pl-0 md:w-1/3 md:pr-12 md:text-right font-mono text-xs md:text-sm text-[#D4AF37]">
+                    <span class="font-bold tracking-wider">SEP 2026</span>
+                    <p class="text-gray-400 text-xs mt-1">GOOGLE CERTIFICATION</p>
+                </div>
+
+                <!-- Right Column: Content -->
+                <div class="pl-14 md:pl-8 md:w-2/3">
+                    <h3 class="text-2xl md:text-3xl font-black uppercase tracking-tight text-white group-hover:text-[#D4AF37] transition-colors">
+                        DATA ANALYTICS CERTIFIED
+                    </h3>
+                    <p class="text-xs font-mono text-[#D4AF37] uppercase tracking-wider mt-1">GOOGLE / COURSERA</p>
+                    <p class="mt-4 text-gray-300 text-sm md:text-base leading-relaxed max-w-2xl">
+                        Completed "Foundations: Data, Data, Everywhere" specialization module. Mastered data cleaning, analytical workflows, data visualization, and structured problem-solving frameworks.
+                    </p>
+                </div>
+            </div>
+
+            <!-- TIMELINE ITEM 3 -->
+            <div class="relative flex flex-col md:flex-row items-start gap-8 group">
+                <!-- Glowing Node Point -->
+                <div class="absolute left-[19px] md:left-[calc(33.333%-5px)] top-1.5 w-3 h-3 rounded-full bg-[#D4AF37] border-2 border-black shadow-[0_0_15px_#D4AF37] z-10 group-hover:scale-150 transition-transform duration-300"></div>
+
+                <!-- Left Column: Dates & Meta -->
+                <div class="pl-14 md:pl-0 md:w-1/3 md:pr-12 md:text-right font-mono text-xs md:text-sm text-[#D4AF37]">
+                    <span class="font-bold tracking-wider">2023 - 2027</span>
+                    <p class="text-gray-400 text-xs mt-1">UNDERGRADUATE</p>
+                </div>
+
+                <!-- Right Column: Content -->
+                <div class="pl-14 md:pl-8 md:w-2/3">
+                    <h3 class="text-2xl md:text-3xl font-black uppercase tracking-tight text-white group-hover:text-[#D4AF37] transition-colors">
+                        BACHELOR OF SCIENCE (BS)
+                    </h3>
+                    <p class="text-xs font-mono text-[#D4AF37] uppercase tracking-wider mt-1">GOVT ISLAMIA COLLEGE / PUNJAB UNIVERSITY</p>
+                    <p class="mt-4 text-gray-300 text-sm md:text-base leading-relaxed max-w-2xl">
+                        Studying core computer science and application development concepts including Object-Oriented Programming, Mobile App Life Cycle, Data Structures, and Software Engineering.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<!-- 05 / CONTACT SECTION -->
+<section id="contact" class="relative w-full min-h-screen bg-[#050505] text-white px-4 md:px-10 py-24 select-none border-t border-white/5 flex flex-col justify-between">
+    
+    <div class="w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-start my-auto">
+        
+        <!-- Left Column: Big Heading & Info -->
+        <div class="lg:col-span-5 w-full">
+            <p class="text-[11px] md:text-xs font-bold tracking-[0.25em] text-[#D4AF37] uppercase">05 / CONTACT</p>
+            <h2 class="text-4xl sm:text-6xl md:text-7xl font-black uppercase tracking-tight text-white mt-2 leading-tight">
+                INITIALIZE <br />
+                <span class="glitter-heading" data-text="TRANSMISSION.">TRANSMISSION.</span>
+            </h2>
+
+            <p class="mt-6 text-gray-400 text-sm md:text-base leading-relaxed max-w-md">
+                Have an ambitious project to build, an engineering opportunity, or a collaborative inquiry? Send a direct message below.
+            </p>
+
+            <!-- Direct Contact Meta Info -->
+            <div class="mt-10 space-y-4 font-mono text-xs text-[#D4AF37]">
+                <div class="flex items-center gap-3">
+                    <span class="w-2 h-2 rounded-full bg-[#D4AF37] animate-ping"></span>
+                    <span>LOCATION: SIALKOT, PAKISTAN</span>
+                </div>
+                <div class="flex items-center gap-3 text-gray-300">
+                    <span class="text-[#D4AF37]">// EMAIL:</span>
+                    <a href="haseebaimtiaz.design@example.com" class="hover:text-[#D4AF37] transition-colors">haseebaimtiaz.design@gmail.com</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Column: Glassmorphism Luxury Form -->
+        <div class="lg:col-span-7 w-full">
+            <div class="relative p-[1.5px] rounded-2xl bg-gradient-to-br from-[#D4AF37]/40 via-white/10 to-transparent">
+                
+                <div class="bg-[#090909]/90 p-6 md:p-10 rounded-2xl backdrop-blur-xl border border-white/5 space-y-6">
+                    
+                    <form action="#" method="POST" class="space-y-6">
+                        
+                        <!-- Row 1: Name & Email -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="text-[11px] font-mono tracking-wider text-[#D4AF37] uppercase">// SENDER NAME</label>
+                                <input type="text" placeholder="Enter name" required 
+                                    class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] transition-all" />
+                            </div>
+
+                            <div class="space-y-2">
+                                <label class="text-[11px] font-mono tracking-wider text-[#D4AF37] uppercase">// SENDER EMAIL</label>
+                                <input type="email" placeholder="Enter email" required 
+                                    class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] transition-all" />
+                            </div>
+                        </div>
+
+                        <!-- Row 2: Message -->
+                        <div class="space-y-2">
+                            <label class="text-[11px] font-mono tracking-wider text-[#D4AF37] uppercase">// MESSAGE CONTENT</label>
+                            <textarea rows="5" placeholder="Enter transmission details..." required 
+                                class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] transition-all resize-none"></textarea>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" 
+                            class="w-full py-4 bg-gradient-to-r from-[#D4AF37] to-[#B8860B] text-black font-black uppercase tracking-widest rounded-lg hover:brightness-110 hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] transition-all duration-300">
+                            EXECUTE DISPATCH ↗️
+                        </button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Minimal Footer Bar with Original Brand Colors -->
+<div class="w-full pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-xs font-mono text-gray-400 gap-6">
+    
+    <!-- Copyright Info -->
+    <p class="text-gray-500">© 2026 HASEEBA IMTIAZ. ALL RIGHTS RESERVED.</p>
+
+    <!-- Social Badges & Direct Email -->
+    <div class="flex items-center gap-6">
+        
+        
+        <!-- Gmail Logo Box -->
+        <a href="mailto:haseebaimtiaz.design@gmail.com" title="Send Email" class="p-2.5 rounded-lg bg-white/5 border border-white/10 hover:border-[#EA4335] hover:bg-[#EA4335]/10 transition-all group flex items-center justify-center">
+            <svg class="w-5 h-5 fill-[#EA4335] group-hover:scale-110 transition-transform" viewBox="0 0 24 24">
+                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+        </a>
+
+        <!-- GitHub Logo Box -->
+        <a href="github.com/Haseeba-Imtiaz" target="_blank" rel="noopener noreferrer" title="GitHub Profile" class="p-2.5 rounded-lg bg-white/5 border border-white/10 hover:border-white hover:bg-white/10 transition-all group flex items-center justify-center">
+            <svg class="w-5 h-5 fill-current text-white group-hover:scale-110 transition-transform" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+            </svg>
+        </a>
+
+        <!-- LinkedIn Logo Box -->
+        <a href="linkedin.com/in/haseeba-imtiaz" target="_blank" rel="noopener noreferrer" title="LinkedIn Profile" class="p-2.5 rounded-lg bg-white/5 border border-white/10 hover:border-[#0077B5] hover:bg-[#0077B5]/10 transition-all group flex items-center justify-center">
+            <svg class="w-5 h-5 fill-[#0077B5] group-hover:scale-110 transition-transform" viewBox="0 0 24 24">
+                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+            </svg>
+        </a>
+
+    </div>
+</div>

@@ -29,4 +29,14 @@ If you want to pull the code and run it on your machine:
 
 1. *Clone the repo:*
    ```bash
-   git clone [https://github.com/Haseeba-Imtiaz/haseeba-portfolio.git]
+   git clone https://github.com/Haseeba-Imtiaz/haseeba-portfolio.git
+   ```
+**Open the project folder:**
+```bash
+cd haseeba-portfolio
+```
+**Build & Run:**
+```
+dotnet restore
+dotnet run
+```

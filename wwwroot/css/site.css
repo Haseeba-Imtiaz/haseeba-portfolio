@@ -82,4 +82,20 @@ html, body {
 .icon-box:hover {
   background-color: #333333;
   transform: translateY(-2px);
+}@media screen and (max-width: 768px) {
+  .hero-section, #hero, .hero {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    overflow-x: hidden !important;
+  }
+  .hero h1, .hero-section h1 {
+    font-size: 1.8rem !important;
+    word-wrap: break-word !important;
+  }
+  .hero img, .hero-section img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
 }

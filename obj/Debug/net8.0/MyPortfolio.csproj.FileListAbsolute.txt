@@ -29,3 +29,13 @@ C:\Users\shera\MyPortfolio\obj\Debug\net8.0\MyPortfolio.pdb
 C:\Users\shera\MyPortfolio\obj\Debug\net8.0\MyPortfolio.genruntimeconfig.cache
 C:\Users\shera\MyPortfolio\obj\Debug\net8.0\ref\MyPortfolio.dll
 C:\Users\shera\MyPortfolio\obj\Debug\net8.0\MyPortfolio.sourcelink.json
+C:\Users\shera\MyPortfolio\bin\Debug\net8.0\publish\publish\web.config
+C:\Users\shera\MyPortfolio\bin\Debug\net8.0\publish\web.config
+C:\Users\shera\MyPortfolio\bin\Debug\net8.0\publish\appsettings.Development.json
+C:\Users\shera\MyPortfolio\bin\Debug\net8.0\publish\appsettings.json
+C:\Users\shera\MyPortfolio\bin\Debug\net8.0\publish\MyPortfolio.deps.json
+C:\Users\shera\MyPortfolio\bin\Debug\net8.0\publish\MyPortfolio.runtimeconfig.json
+C:\Users\shera\MyPortfolio\bin\Debug\net8.0\publish\publish\appsettings.Development.json
+C:\Users\shera\MyPortfolio\bin\Debug\net8.0\publish\publish\appsettings.json
+C:\Users\shera\MyPortfolio\bin\Debug\net8.0\publish\publish\MyPortfolio.deps.json
+C:\Users\shera\MyPortfolio\bin\Debug\net8.0\publish\publish\MyPortfolio.runtimeconfig.json

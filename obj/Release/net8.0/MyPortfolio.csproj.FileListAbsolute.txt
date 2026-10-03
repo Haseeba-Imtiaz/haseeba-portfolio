@@ -34,3 +34,13 @@ C:\Users\shera\MyPortfolio\bin\Release\net8.0\publish\appsettings.Development.js
 C:\Users\shera\MyPortfolio\bin\Release\net8.0\publish\appsettings.json
 C:\Users\shera\MyPortfolio\bin\Release\net8.0\publish\MyPortfolio.deps.json
 C:\Users\shera\MyPortfolio\bin\Release\net8.0\publish\MyPortfolio.runtimeconfig.json
+C:\Users\shera\MyPortfolio\bin\Release\net8.0\publish\publish\web.config
+C:\Users\shera\MyPortfolio\bin\Release\net8.0\publish\publish\appsettings.Development.json
+C:\Users\shera\MyPortfolio\bin\Release\net8.0\publish\publish\appsettings.json
+C:\Users\shera\MyPortfolio\bin\Release\net8.0\publish\publish\MyPortfolio.deps.json
+C:\Users\shera\MyPortfolio\bin\Release\net8.0\publish\publish\MyPortfolio.runtimeconfig.json
+C:\Users\shera\MyPortfolio\bin\Release\net8.0\publish\publish\publish\web.config
+C:\Users\shera\MyPortfolio\bin\Release\net8.0\publish\publish\publish\appsettings.Development.json
+C:\Users\shera\MyPortfolio\bin\Release\net8.0\publish\publish\publish\appsettings.json
+C:\Users\shera\MyPortfolio\bin\Release\net8.0\publish\publish\publish\MyPortfolio.deps.json
+C:\Users\shera\MyPortfolio\bin\Release\net8.0\publish\publish\publish\MyPortfolio.runtimeconfig.json

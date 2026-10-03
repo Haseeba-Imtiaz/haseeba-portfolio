@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "cdLuoMavIwFiZfPYuz4Ryb6TKTJ6BzJR1zCshhskebM=",
+  "Hash": "/uM1jlzBr6lD6ehYJHBnm36HbobbeFUFGaYCjRGoMuc=",
   "Source": "MyPortfolio",
   "BasePath": "_content/MyPortfolio",
   "Mode": "Default",
@@ -72,6 +72,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\shera\\MyPortfolio\\wwwroot\\docs\\Haseeba_Imtiaz.CV.pdf",
+      "SourceId": "MyPortfolio",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\shera\\MyPortfolio\\wwwroot\\",
+      "BasePath": "_content/MyPortfolio",
+      "RelativePath": "docs/Haseeba_Imtiaz.CV.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\docs\\Haseeba_Imtiaz.CV.pdf"
     },
     {
       "Identity": "C:\\Users\\shera\\MyPortfolio\\wwwroot\\favicon.ico",
@@ -1212,6 +1231,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\shera\\MyPortfolio\\wwwroot\\mobile-video.mp4",
+      "SourceId": "MyPortfolio",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\shera\\MyPortfolio\\wwwroot\\",
+      "BasePath": "_content/MyPortfolio",
+      "RelativePath": "mobile-video.mp4",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\mobile-video.mp4"
     },
     {
       "Identity": "C:\\Users\\shera\\MyPortfolio\\wwwroot\\profile-photo.jpeg",

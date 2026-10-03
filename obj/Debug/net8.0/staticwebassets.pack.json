@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "C:\\Users\\shera\\MyPortfolio\\wwwroot\\docs\\Haseeba_Imtiaz.CV.pdf",
+      "PackagePath": "staticwebassets\\docs\\Haseeba_Imtiaz.CV.pdf"
+    },
+    {
       "Id": "C:\\Users\\shera\\MyPortfolio\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
@@ -247,6 +251,10 @@
     {
       "Id": "C:\\Users\\shera\\MyPortfolio\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\shera\\MyPortfolio\\wwwroot\\mobile-video.mp4",
+      "PackagePath": "staticwebassets\\mobile-video.mp4"
     },
     {
       "Id": "C:\\Users\\shera\\MyPortfolio\\wwwroot\\profile-photo.jpeg",

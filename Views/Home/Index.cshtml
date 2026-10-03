@@ -14,12 +14,19 @@
     <!-- Video Background Layer with Spotlight Positioning -->
     <!-- Video Background Layer with Extra Floor & Ambient Glow -->
 <div class="absolute inset-0 w-full h-full z-0 pointer-events-none overflow-hidden">
-    <!-- Video element with increased brightness & saturation for floor glow -->
-    <video autoPlay loop muted playsInline 
-           class="w-full h-full object-cover filter brightness-110 contrast-105 saturate-110" 
-           style="object-position: 20% 20%;">
-        <source src="~/hero-video.mp4" type="video/mp4" />
-    </video>
+    <!-- Laptop / Desktop Screen ke liye Video (Only visible on MD screens & above) -->
+<video autoplay loop muted playsinline webkit-playsinline 
+       class="hidden md:block w-full h-full object-cover filter brightness-70 contrast-105 saturate-110"
+       style="object-position: 20% 20%;">
+    <source src="~/hero-video.mp4" type="video/mp4" />
+</video>
+
+<!-- Mobile Screen ke liye Video (Only visible on Small / Mobile screens) -->
+<video autoplay loop muted playsinline webkit-playsinline 
+       class="block md:hidden w-full h-full object-cover filter brightness-110 contrast-105 saturate-110">
+    <source src="~/mobile-video.mp4" type="video/mp4" />
+</video>
+
     <!-- Signature & Quote Overlay (Right Side) -->
 <div class="absolute right-[8%] md:right-[12%] top-[85%] -translate-y-1/2 z-10 flex flex-col items-start gap-1 text-left pointer-events-none select-none hidden sm:flex">
     
@@ -52,23 +59,34 @@
     <div class="absolute inset-0 bg-gradient-to-t from-[#050505]/60 via-transparent to-transparent z-10"></div>
 </div>
 
-    <!-- Navbar -->
-    <nav class="relative z-20 w-full px-8 md:px-16 py-6 flex justify-between items-center bg-transparent">
-        <div class="text-sm md:text-base font-black tracking-[0.25em] text-white uppercase opacity-90">
-            HASEEBA.DEV
-        </div>
-        
-        <div class="flex items-center gap-6 md:gap-10 text-[11px] md:text-xs font-semibold tracking-[0.2em] text-gray-300 uppercase">
-            <a href="#about" class="hover:text-amber-400 transition-colors">ABOUT</a>
-            <a href="#projects" class="hover:text-amber-400 transition-colors">PROJECTS</a>
-            <a href="#skills" class="hover:text-amber-400 transition-colors">SKILLS</a>
-            <a href="#contact" class="hover:text-amber-400 transition-colors">CONTACT</a>
-            <a href="#contact" class="hidden md:inline-block border border-white/20 px-4 py-2 rounded-full text-[10px] tracking-widest text-gray-300 hover:border-amber-400 hover:text-amber-400 transition-all">LET'S TALK /</a>
-        </div>
-    </nav>
+    <!-- Navbar (Desktop Layout Same Rahega, Sirf Mobile Change Hoga) -->
+<nav class="relative z-40 w-full px-6 md:px-16 py-6 flex justify-between items-center bg-transparent">
+    
+    <!-- Left Logo (Dono screens par exact same dikhega) -->
+    <div class="text-sm md:text-base font-black tracking-[0.25em] text-white uppercase opacity-90">
+        HASEEBA<span class="text-[#D4AF37]">.DEV</span>
+    </div>
+
+    <!-- Center Links (Mobile par HIDE ho jayenge, Laptop par WAPAS SHOW honge) -->
+    <div class="hidden md:flex items-center gap-6 md:gap-10 text-[11px] md:text-xs font-semibold tracking-[0.2em] text-gray-300">
+        <a href="#about" class="hover:text-amber-400 transition-colors">ABOUT</a>
+        <a href="#projects" class="hover:text-amber-400 transition-colors">PROJECTS</a>
+        <a href="#skills" class="hover:text-amber-400 transition-colors">SKILLS</a>
+         <a href="#experience" class="hover:text-amber-400 transition-colors">EXPERIENCE</a>
+    </div>
+
+    <!-- Right Button (Mobile par Let's Talk, Desktop par bilkul pehle jaisa) -->
+    <a href="#contact" class="inline-block border border-[#D4AF37] text-[#D4AF37] px-3.5 py-1.5 md:px-4 md:py-2 rounded-full text-[10px] md:text-xs font-bold uppercase tracking-widest hover:bg-[#D4AF37] hover:text-black transition-all">
+        Let's Talk ↗️
+    </a>
+
+</nav>
 
     <!-- Hero Content -->
-    <div class="relative z-20 w-full px-8 md:px-16 my-auto">
+    <div class="hidden md:block relative z-20 w-full px-8 md:px-16 my-auto">
+        <!-- High-Contrast Gold/Bronze Ambient Glow Behind Left Text -->
+<div class="absolute -top-16 left-0 w-[650px] h-[600px] pointer-events-none z-10 opacity-90" 
+     style="background: radial-gradient(circle at 25% 45%, rgba(212, 175, 55, 0.22) 0%, rgba(180, 110, 20, 0.12) 45%, transparent 70%); filter: blur(50px);"></div>
         <div class="max-w-3xl text-left py-1">
             <h1 class="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight leading-[0.95] text-white">
                 I BUILD <br />
@@ -90,15 +108,54 @@
                 <a href="#projects" class="border border-[#D4AF37]/60 bg-black/40 backdrop-blur-md text-[#FFE599] font-bold text-[11px] uppercase tracking-[0.15em] px-12 py-3.5 rounded-sm hover:bg-[#D4AF37] hover:text-black transition-all">
                     EXPLORE MY WORK &nearr;
                 </a>
-                <a href="~/resume.pdf" target="_blank" class="border border-white/20 bg-black/20 backdrop-blur-md text-gray-300 font-bold text-[11px] uppercase tracking-[0.15em] px-12 py-3.5 rounded-sm hover:border-white hover:text-white transition-all">
+                <a href="~/docs/Haseeba_Imtiaz.CV.pdf" target="_blank" class="border border-white/20 bg-black/20 backdrop-blur-md text-gray-300 font-bold text-[11px] uppercase tracking-[0.15em] px-12 py-3.5 rounded-sm hover:border-white hover:text-white transition-all">
                     DOWNLOAD RESUME &nearr;
                 </a>
             </div>
         </div>
     </div>
+<!-- Mobile Specific Hero Content (Pixel-Perfect Professional Layout) -->
+<div class="block md:hidden relative z-20 w-full flex flex-col justify-between items-start text-left px-5 pt-1 pb-8 min-h-[calc(100vh-60px)]">
 
+    <!-- Top Heading Section (Slightly shifted down) -->
+<!-- Top Heading Section (Aligned exactly under HASEEBA.DEV) -->
+<div class="w-full text-left z-34 pt-2 px-0 mb-3 -mt-3">
+    <h1 class="text-[30px] font-black text-white uppercase tracking-tight leading-[1.15]">
+        I BUILD <br />
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#FFE599] via-[#D4AF37] to-[#AA7C11]">
+            DIGITAL
+        </span> <br />
+        EXPERIENCES
+    </h1>
+    <p class="mt-0.5 text-[9px] font-bold tracking-[0.15em] text-[#D4AF37] uppercase leading-snug max-w-[250px]">
+        FRONTEND DEVELOPER &bull; ASP.NET CORE &bull; DATA ANALYTICS
+    </p>
+</div>
+
+    <!-- 2. CENTER: Spacer for Video Clearance -->
+    <div class="my-auto py-4"></div>
+
+    <!-- 3. BOTTOM: Bio Paragraph & Styled Buttons -->
+<div class="w-full max-w-xs mx-auto flex flex-col items-center text-center z-30 pb-4">
+    <!-- Paragraph ko buttons se thoda aur upar shift karne ke liye mb-4 / -mt-4 add kiya hai -->
+    <p class="text-[11px] text-gray-300 leading-relaxed font-normal opacity-90 px-2 mb-4 -mt-4">
+        I turn bold ideas into responsive web experiences combining intuitive React & ASP.NET interfaces with data-driven insights.
+    </p>
+
+    <!-- Call to Action Buttons -->
+    <div class="flex flex-col w-full gap-2.5">
+        <a href="#projects" class="w-full py-2.5 bg-gradient-to-r from-[#D4AF37] to-[#AA7C11] text-black font-bold text-xs tracking-wider uppercase rounded-lg shadow-lg active:scale-95 transition-all">
+            Explore My Work ↗️
+        </a>
+        <a href="~/docs/Haseeba_Imtiaz.CV.pdf" download class="w-full py-2.5 bg-white/5 border border-white/20 text-white font-semibold text-xs tracking-wider uppercase rounded-lg backdrop-blur-sm active:scale-95 transition-all hover:bg-white/10">
+            Download Resume ↗️
+        </a>
+    </div>
+</div>
+
+</div>
     <!-- Scroll Indicator -->
-    <div class="relative z-20 pb-6 w-full flex justify-center items-center">
+    <div class="flex relative z-20 pb-6 w-full flex justify-center items-center">
         <a href="#about" class="animate-bounce text-xs font-semibold tracking-widest text-[#D4AF37] opacity-80 uppercase">
             &darr; Scroll Down
         </a>
@@ -267,7 +324,7 @@
                                 </h3>
 
                                 <p class="mt-6 text-gray-300 text-sm md:text-base leading-relaxed max-w-3xl">
-                                    Current high-end, dark-themed interactive portfolio platform engineered using C# ASP.NET Core MVC and Tailwind CSS. Features custom video background overlays, continuous gold glitter shimmer animations, and sticky stacked 3D cards.
+                                    High-end, interactive portfolio platform engineered using C# ASP.NET Core MVC and Tailwind CSS. Features custom video lighting masks, Glassmorphic cards, continuous gold shimmer accents, and seamless Formspree API integration.
                                 </p>
 
                                 <div class="flex flex-wrap gap-2.5 mt-8">
@@ -292,8 +349,8 @@
                             </div>
 
                             <div class="mt-10">
-                                <a href="#" class="w-full inline-flex justify-center items-center gap-2 text-xs md:text-sm font-bold text-black bg-gradient-to-r from-[#D4AF37] to-[#AA7C11] py-4 px-6 rounded uppercase tracking-wider hover:brightness-110 transition-all shadow-[0_0_20px_rgba(212,175,55,0.3)]">
-                                    CURRENT LIVE SITE ↗️
+                                <a href="http://haseeba-portfolio.runasp.net/" class="w-full inline-flex justify-center items-center gap-2 text-xs md:text-sm font-bold text-black bg-gradient-to-r from-[#D4AF37] to-[#AA7C11] py-4 px-6 rounded uppercase tracking-wider hover:brightness-110 transition-all shadow-[0_0_20px_rgba(212,175,55,0.3)]">
+                                    VIEW LIVE PROJECT ↗️
                                 </a>
                             </div>
                         </div>
@@ -610,7 +667,7 @@
                 </div>
                 <div class="flex items-center gap-3 text-gray-300">
                     <span class="text-[#D4AF37]">// EMAIL:</span>
-                    <a href="haseebaimtiaz.design@example.com" class="hover:text-[#D4AF37] transition-colors">haseebaimtiaz.design@gmail.com</a>
+                    <a href="mailto:haseebaimtiaz.design@example.com" class="hover:text-[#D4AF37] transition-colors">haseebaimtiaz.design@gmail.com</a>
                 </div>
             </div>
         </div>
@@ -621,19 +678,19 @@
                 
                 <div class="bg-[#090909]/90 p-6 md:p-10 rounded-2xl backdrop-blur-xl border border-white/5 space-y-6">
                     
-                    <form action="#" method="POST" class="space-y-6">
+                    <form id="contactForm" action="https://formspree.io/f/mljdqgry" method="POST" class="space-y-6">
                         
                         <!-- Row 1: Name & Email -->
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             <div class="space-y-2">
                                 <label class="text-[11px] font-mono tracking-wider text-[#D4AF37] uppercase">// SENDER NAME</label>
-                                <input type="text" placeholder="Enter name" required 
+                                <input type="text" name="name" placeholder="Enter name" required 
                                     class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] transition-all" />
                             </div>
 
                             <div class="space-y-2">
                                 <label class="text-[11px] font-mono tracking-wider text-[#D4AF37] uppercase">// SENDER EMAIL</label>
-                                <input type="email" placeholder="Enter email" required 
+                                <input type="email" name="email" placeholder="Enter email" required 
                                     class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] transition-all" />
                             </div>
                         </div>
@@ -641,7 +698,7 @@
                         <!-- Row 2: Message -->
                         <div class="space-y-2">
                             <label class="text-[11px] font-mono tracking-wider text-[#D4AF37] uppercase">// MESSAGE CONTENT</label>
-                            <textarea rows="5" placeholder="Enter transmission details..." required 
+                            <textarea name="message" rows="5" placeholder="Enter transmission details..." required 
                                 class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] transition-all resize-none"></textarea>
                         </div>
 
@@ -650,6 +707,7 @@
                             class="w-full py-4 bg-gradient-to-r from-[#D4AF37] to-[#B8860B] text-black font-black uppercase tracking-widest rounded-lg hover:brightness-110 hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] transition-all duration-300">
                             EXECUTE DISPATCH ↗️
                         </button>
+                        <p id="formStatus" class="text-xs font-mono text-[#D4AF37] mt-3 text-center hidden"></p>
                     </form>
 
                 </div>
@@ -676,14 +734,14 @@
         </a>
 
         <!-- GitHub Logo Box -->
-        <a href="github.com/Haseeba-Imtiaz" target="_blank" rel="noopener noreferrer" title="GitHub Profile" class="p-2.5 rounded-lg bg-white/5 border border-white/10 hover:border-white hover:bg-white/10 transition-all group flex items-center justify-center">
+        <a href="http://github.com/Haseeba-Imtiaz" target="_blank" rel="noopener noreferrer" title="GitHub Profile" class="p-2.5 rounded-lg bg-white/5 border border-white/10 hover:border-white hover:bg-white/10 transition-all group flex items-center justify-center">
             <svg class="w-5 h-5 fill-current text-white group-hover:scale-110 transition-transform" viewBox="0 0 24 24">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
             </svg>
         </a>
 
         <!-- LinkedIn Logo Box -->
-        <a href="linkedin.com/in/haseeba-imtiaz" target="_blank" rel="noopener noreferrer" title="LinkedIn Profile" class="p-2.5 rounded-lg bg-white/5 border border-white/10 hover:border-[#0077B5] hover:bg-[#0077B5]/10 transition-all group flex items-center justify-center">
+        <a href="http://linkedin.com/in/haseeba-imtiaz" target="_blank" rel="noopener noreferrer" title="LinkedIn Profile" class="p-2.5 rounded-lg bg-white/5 border border-white/10 hover:border-[#0077B5] hover:bg-[#0077B5]/10 transition-all group flex items-center justify-center">
             <svg class="w-5 h-5 fill-[#0077B5] group-hover:scale-110 transition-transform" viewBox="0 0 24 24">
                 <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
             </svg>
@@ -691,3 +749,50 @@
 
     </div>
 </div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("contactForm");
+        const status = document.getElementById("formStatus");
+        const btn = form ? form.querySelector("button[type='submit']") : null;
+
+        if (form) {
+            form.addEventListener("submit", async function (e) {
+                e.preventDefault();
+                
+                if (btn) {
+                    btn.innerText = "SENDING TRANSMISSION...";
+                    btn.disabled = true;
+                }
+
+                const data = new FormData(form);
+
+                try {
+                    const response = await fetch(form.action, {
+                        method: 'POST',
+                        body: data,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+
+                    if (response.ok) {
+                        status.innerText = "// TRANSMISSION SUCCESSFUL! MESSAGE DELIVERED.";
+                        status.classList.remove("hidden");
+                        form.reset();
+                    } else {
+                        status.innerText = "// ERROR: TRANSMISSION FAILED. PLEASE TRY AGAIN.";
+                        status.classList.remove("hidden");
+                    }
+                } catch (error) {
+                    status.innerText = "// NETWORK ERROR: PLEASE CHECK CONNECTION.";
+                    status.classList.remove("hidden");
+                } finally {
+                    if (btn) {
+                        btn.innerText = "EXECUTE DISPATCH ↗️";
+                        btn.disabled = false;
+                    }
+                }
+            });
+        }
+    });
+</script>
